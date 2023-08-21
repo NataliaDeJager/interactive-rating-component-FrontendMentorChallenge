@@ -1,0 +1,184 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--veryDarkBlue);
+    font-family: 'Overpass', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 360px;
+    width: 360px;
+    background-image: radial-gradient(circle at top,hsla(216, 12%, 54%, 0.5), hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+    padding: 25px;
+    border-radius: 30px;
+    margin: 0;
+}
+
+h1 {
+    text-align: left;
+    color: var(--white);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 2rem;
+}
+
+p {
+    text-align: left;
+    color: var(--lightGrey);
+    font-size: 15px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+
+}
+.rating-btn {
+    color: var(--lightGrey);
+    background-color: hsla(217, 12%, 63%, 0.1);
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+#submit {
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top:15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --------------- Hover effects ---------------------- */
+
+.rating-btn:hover {
+    color: var(--white);
+    background-color: var(--orange);
+    opacity: 100%;
+    cursor: pointer;
+}
+
+#submit:hover {
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+/* ----- End Of Hover Effects -------------------------*/
+
+.star-container {
+    background-color:var(--mediumGrey) ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------- Thank you card ----------------*/
+
+.container2 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    width: 360px;
+    background-image: radial-gradient(circle at top, hsla(216, 12%, 54%, 0.5), hsl(213, 19%, 18%),hsl(216, 12%, 8%));
+    padding: 25px;
+    border-radius: 30px;
+    margin: 0;
+}
+
+#text {
+    text-align: center;
+}
+
+.orange-text-container {
+    background-color: hsla(217, 12%, 63%, 0.1);
+    padding: 0 20px;
+    border-radius: 25px;
+    margin: 25px 0 10px 0;
+}
+
+#orange-text {
+    color:hsla(25, 97%, 53%, 0.7) ;
+    padding: 4px 0px;
+    margin: 5px;
+}
+
+.attribution {
+    color: var(--lightGrey);
+    position: fixed;
+    bottom: 0;
+}
+
+
+@media (max-width: 375px ) {
+    .star-container {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .container p {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    .container {
+        height:300px;
+        width:300px;
+    }
+
+    .container .rating-btn {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .container2 {
+        height: 300px;
+        width: 300px;
+    }
+
+    .container2 #thanks-illustration {
+        height: 95px;
+    }
+}
+
+/* ---------- Hide on Submitted ------------ */
+
+.hideOnceSubmitted {
+    display:none;
+}
+
+/* ---------- display Thanks Card ---------*/
+
+.thanks {
+    display: flex;
+}
