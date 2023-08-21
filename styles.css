@@ -14,6 +14,7 @@ body {
     align-items: center;
     background-color: var(--veryDarkBlue);
     font-family: 'Overpass', sans-serif;
+    height: 100vh;
 }
 
 .container {
